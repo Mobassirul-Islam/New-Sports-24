@@ -26,21 +26,26 @@
     <!-- Tailwind Custom color styles starts here -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                "red": '#FF4240',
-                "dark-title": '#131318',
-                "dark-desc": '#424247',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        "red": '#FF4240',
+                        "dark-title": '#131318',
+                        "dark-desc": '#424247',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
     <!-- Tailwind Custom color styles ends here -->
-    
+
     <!-- Embedded CSS styles starts here -->
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         .font-manrope {
             font-family: 'Manrope', 'sans-serif';
         }
@@ -49,8 +54,49 @@
 </head>
 
 <body>
-    <header>
-        
+    <header class="container mx-auto">
+        <!-- Navbar starts here -->
+        <nav class="lg:mt-1">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-auto">
+                            <ul class="p-2">
+                                <li><a>Home</a></li>
+                                <li><a>About</a></li>
+                                <li><a>Pages</a></li>
+                                <li><a>Blog</a></li>
+                                <li><a>Contact</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <a class="cursor-pointer active:bg-[#2b3440] active:text-white hover:bg-slate-200 rounded-lg p-1 text-2xl lg:text-4xl font-manrope font-extrabold">Hockey<span
+                            class="text-red">’</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-red font-manrope text-base font-bold">Home</a></li>
+                        <li><a class="text-dark-desc font-manrope text-base font-bold">About</a></li>
+                        <li><a class="text-dark-desc font-manrope text-base font-bold">Pages</a></li>
+                        <li><a class="text-dark-desc font-manrope text-base font-bold">Blog</a></li>
+                        <li><a class="text-dark-desc font-manrope text-base font-bold">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end space-x-6">
+                    <img class="cursor-pointer hidden lg:inline" src="Styles/Images/Search.png" alt="">
+                    <button class="py-2 px-4 lg:py-4 lg:px-6 rounded-lg hover:text-dark-title bg-red hover:bg-slate-300 text-white font-manrope text-lg lg:text-xl font-bold">Get Ticket</button>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar ends here -->
     </header>
     <main>
 
